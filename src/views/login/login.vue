@@ -119,7 +119,7 @@
 
                 let timeStamp = new Date().getTime();
                 //todo:上线记得改
-                this.captchaPath = 'http://localhost:9000' + '/user/captcha?captcha_key=' + timeStamp + '&random=' + (this.random === '' ? '' : this.random);
+                this.captchaPath = this.blog_constants.baseUrl + '/user/captcha?captcha_key=' + timeStamp + '&random=' + (this.random === '' ? '' : this.random);
 
 
                 this.loginInfo.captcha_key = this.captchaPath.substring(this.captchaPath.lastIndexOf('=') + 1);
